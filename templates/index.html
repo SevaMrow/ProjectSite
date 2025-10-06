@@ -1,0 +1,22 @@
+{% block title %}{% endblock %}
+{% extends 'base.html' %}
+    {% block content %}
+    <p>Name: {{ name }} </p>
+    {{ 22+300 }}
+
+    {% set a = 99 %}
+
+    {% if a > 100 %}
+    <p>Пользователей больше 100</p>
+    {% elif a == 100 %}
+    <p>Пользователей ровно 100</p>
+    {% else %}
+    <p>Пользователей меньше 100</p>
+    {% endif %}
+
+    {% set user_list=["Антон","Марина"] %}
+
+    {% for i in user_list %}
+        <p>{{i}}</p>
+    {% endfor %}
+ {% endblock %}
