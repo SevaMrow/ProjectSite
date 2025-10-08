@@ -30,6 +30,13 @@ def AboutCompany():
 def profile():
     return render_template("profile.html")
 
+@app.route("/Order/<id>")
+def order(id):
+    conn = get_db_connection()
+    products = conn.execute('SELECT * FROM products where id = ' + id).fetchall()
+    conn.close()
+    return render_template("order.html", products=products)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

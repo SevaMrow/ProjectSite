@@ -1,10 +1,10 @@
-{% block title %}Каталог{% endblock %}
+{% block title %}{% endblock %}
 
 {% extends 'base.html' %}
 {% block content %}
-    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Каталог</p>
+    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Оформление заказ</p>
 
-    <style>
+   <style>
         .products-container {
             margin: 0;
             padding: 0;
@@ -81,7 +81,6 @@
                     <td>{{ product['name'] }}</td>
                     <td>{{ product['price'] }} $.</td>
                     <td>{{ product['description'] }}</td>
-                    <a href="/Order/{{ product['id'] }}" >Оформить заказ</a>
                 </tr>
                 {% else %}
                 <tr>

@@ -27,20 +27,7 @@ def init_db():
             customer_email TEXT NOT NULL,
             customer_phone TEXT NOT NULL,
             customer_address TEXT NOT NULL,
-            total_price REAL NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    ''')
-    
-    # Таблица элементов заказа
-    conn.execute('''
-        CREATE TABLE IF NOT EXISTS order_items (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            order_id INTEGER,
-            product_id INTEGER,
-            quantity INTEGER NOT NULL,
-            FOREIGN KEY (order_id) REFERENCES orders (id),
-            FOREIGN KEY (product_id) REFERENCES products (id)
+            total_price REAL NOT NULL
         )
     ''')
     
