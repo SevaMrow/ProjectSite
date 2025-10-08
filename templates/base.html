@@ -8,10 +8,40 @@
 <body>
     <style>
         body {
-            background:blue;
+            background: black;
         }
+
+    .nav-link {
+        text-decoration: none;
+        color: #CDA434;
+        display: block;
+        padding: 40px 20px;
+        background: #4A4A4A;
+        border: 2px solid #DD0000;
+        font-size: 20px;
+        font-weight: bold;
+}
     </style>
-    
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="23%" align="center">
+                    <a href="{{ url_for('main')}}" class="nav-link">Главная</a>
+                </td>
+                <td width="23%" align="center">
+                    <a href="{{ url_for('catalog')}}" class="nav-link">Каталог</a>
+                </td>
+                <td width="23%" align="center">
+                    <a href="{{ url_for('AboutUs')}}" class="nav-link">О нас</a>
+                </td>
+                <td width="23%" align="center">
+                    <a href="{{ url_for('AboutCompany')}}" class="nav-link">О компании</a>
+                </td>
+                <td width="8%" align="center">
+                    <a class="nav-link">Лого</a>
+                </td>
+
+            </tr>
+        </table>
     {% block content %}
     
     {% endblock %}

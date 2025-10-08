@@ -1,0 +1,93 @@
+{% block title %}Каталог{% endblock %}
+
+{% extends 'base.html' %}
+{% block content %}
+    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Каталог</p>
+
+    <style>
+        .products-container {
+            margin: 0;
+            padding: 0;
+            font-family: initial;
+            font-size: initial;
+        }
+        .products-table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            color: #CDA434;
+            font-weight: bold;
+        }
+        .products-table th, 
+        .products-table td { 
+            border: 3px solid #DD0000; 
+            padding: 12px; 
+            text-align: left;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: bold;
+        }
+        .products-table th { 
+            background-color: #292929; 
+            color: #CDA434;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-table tr:nth-child(even) { 
+            background-color: #4A4A4A;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-table tr:nth-child(odd) { 
+            background-color: #4A4A4A;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .no-products {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        .products-container h1 {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            margin: inherit;
+            padding: inherit;
+        }
+    </style>
+
+    <h1>Список товаров</h1>
+    
+    <div class="products-container">
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product['id'] }}</td>
+                    <td>{{ product['name'] }}</td>
+                    <td>{{ product['price'] }} $.</td>
+                    <td>{{ product['description'] }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4" class="no-products">Нет товаров</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
