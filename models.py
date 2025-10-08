@@ -23,11 +23,10 @@ def init_db():
     conn.execute('''
         CREATE TABLE IF NOT EXISTS orders (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            customer_name TEXT NOT NULL,
-            customer_email TEXT NOT NULL,
-            customer_phone TEXT NOT NULL,
-            customer_address TEXT NOT NULL,
-            total_price REAL NOT NULL
+            name_user TEXT,
+            email TEXT,
+            number TEXT,
+            text TEXT
         )
     ''')
     

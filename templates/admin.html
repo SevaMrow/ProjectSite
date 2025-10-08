@@ -2,9 +2,9 @@
 
 {% extends 'base.html' %}
 {% block content %}
-    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Оформление заказ</p>
+    <p style="font-size: 40px; font-weight: bold; color: #CDA434">Добро пожаловать в админ панель, здесь находяться заказы пользователев</p>
 
-   <style>
+     <style>
         .products-container {
             margin: 0;
             padding: 0;
@@ -68,38 +68,24 @@
         <table class="products-table">
             <thead>
                 <tr>
-                    <th style = "font-size: 20px;text-align: center">ID</th>
-                    <th style = "font-size: 20px;text-align: center">Название</th>
-                    <th style = "font-size: 20px;text-align: center">Цена</th>
-                    <th style = "font-size: 20px;text-align: center">Описание</th>
+                    <th style = "font-size: 20px;text-align: center">№ Товара</th>
+                    <th style = "font-size: 20px;text-align: center">Имя</th>
+                    <th style = "font-size: 20px;text-align: center">Почта</th>
+                    <th style = "font-size: 20px;text-align: center">Номер телефона</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
                     <td><p style = "text-align: center">{{ product['id'] }}</td></p>
-                    <td>{{ product['name'] }}</td>
-                    <td><p style = "text-align: center">{{ product['price'] }} $.</td></p>
-                    <td>{{ product['description'] }}</td>
+                    <td>{{ product['name_user'] }}</td>
+                    <td>{{ product['email'] }}</td>
+                    <td>{{ product['number'] }}</td>
                 </tr>
-                <form action="" method="post" class="form-example">
-                <div class="form-example">
-                    <label for="name" style = "color:#CDA434; font-weight: bold; font-size: 20px">Ваше имя: </label>
-                    <input type="text" name="name" id="name" required />
-                </div>
-                <div class="form-example">
-                    <label for="email" style = "color:#CDA434; font-weight: bold; font-size: 20px">Ваш email: </label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-                <div class="form-example">
-                    <label for="number" style = "color:#CDA434; font-weight: bold; font-size: 20px">Ваш телефон: </label>
-                    <input type="number" name="number" id="number" required />
-                </div>
-                <div class="form-example">
-                    <input type="submit" style = "background-color: #CDA434;" value="Отправить заявку" />
-                </div>
-                </form>
-                <br>
+                {% else %}
+                <tr>
+                    <td colspan="4" class="no-products">Нет заказов</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>

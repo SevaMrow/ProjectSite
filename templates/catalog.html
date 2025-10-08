@@ -62,26 +62,27 @@
         }
     </style>
 
-    <h1>Список товаров</h1>
+    <h1 style = "color:#CDA434">Список товаров</h1>
     
     <div class="products-container">
         <table class="products-table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Название</th>
-                    <th>Цена</th>
-                    <th>Описание</th>
+                    <th style = "font-size: 20px;text-align: center">ID</th>
+                    <th style = "font-size: 20px;text-align: center">Название</th>
+                    <th style = "font-size: 20px;text-align: center">Цена</th>
+                    <th style = "font-size: 20px;text-align: center">Описание</th>
+                    <th style = "font-size: 20px;text-align: center">Оформление заказа</th>
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
-                    <td>{{ product['id'] }}</td>
+                    <td><p style = "text-align: center">{{ product['id'] }}</td></p>
                     <td>{{ product['name'] }}</td>
-                    <td>{{ product['price'] }} $.</td>
+                    <td><p style = "text-align: center">{{ product['price'] }} $.</td></p>
                     <td>{{ product['description'] }}</td>
-                    <a href="/Order/{{ product['id'] }}" >Оформить заказ</a>
+                    <td><p style = "text-align: center"><a href="/Order/{{ product['id'] }}" style = "color:#CDA434;">Оформить заказ</a></td></p>
                 </tr>
                 {% else %}
                 <tr>

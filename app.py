@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 from models import get_db_connection
 
 app = Flask(__name__)
@@ -26,17 +26,31 @@ def AboutUs():
 def AboutCompany():
     return render_template("company.html")
 
-@app.route("/Profile/")
-def profile():
-    return render_template("profile.html")
-
-@app.route("/Order/<id>")
+@app.route("/Order/<id>", methods=['post', 'get'])
 def order(id):
+    if request.method == "POST":
+        user = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('number')
+        print(user)
+        conn = get_db_connection()
+        sql  = f'INSERT INTO orders (name_user,email,number,text) VALUES ("{user}","{email}","{number}","{id}")'
+        print(sql)
+        conn.execute(sql)
+        conn.commit()
+        print("Отправка данных прошла")
+        conn.close()
+
     conn = get_db_connection()
     products = conn.execute('SELECT * FROM products where id = ' + id).fetchall()
     conn.close()
     return render_template("order.html", products=products)
 
+@app.route("/admin/")
+def admin():
+    conn = get_db_connection()
+    products = conn.execute('SELECT * FROM orders').fetchall()
+    return render_template("admin.html", products=products)
 
 if __name__ == "__main__":
     app.run(debug=True)
