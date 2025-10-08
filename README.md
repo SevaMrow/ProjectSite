@@ -62,3 +62,29 @@
 
 Ваше имя или название команды – Севастьян
 * Ссылка на проект: https://github.com/SevaMrow/ProjectSite
+
+## 📁 Структура проекта
+```
+ProjectSite/
+├── __pycache__
+    ├──app.cpython-39.pyc
+    ├──models.cpython-39
+    └──models.cpython-313.pyc
+├── static
+    └──img
+        └──Screenshot8480.png
+├── templates
+    ├──aboutus.html
+    ├──admin.html
+    ├──base.html
+    ├──catalog.html
+    ├──company.html
+    ├──index.html
+    ├──meny.html
+    └──order.html
+├── app.py
+├── database.db
+├── init_db.py
+├── models.py
+└──README.md
+```
