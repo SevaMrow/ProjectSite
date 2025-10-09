@@ -1,11 +1,11 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect
 from models import get_db_connection
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return redirect('http://127.0.0.1:5000/Main/')
 
 @app.route("/Main/")
 def main():
