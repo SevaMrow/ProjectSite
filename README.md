@@ -78,21 +78,21 @@
 ```
 app/
 ├── __pycache__    #кэш питона
-    ├──app.cpython-39.pyc
-    ├──models.cpython-39
-    └──models.cpython-313.pyc
+  ├──app.cpython-39.pyc
+  ├──models.cpython-39
+  └──models.cpython-313.pyc
 ├── static        #Хранение для будущего css и изображений
-    └──img
-        └──Screenshot8480.png
+  └──img
+    └──Screenshot8480.png
 ├── templates    # Сайты страничек html
-    ├──aboutus.html
-    ├──admin.html
-    ├──base.html
-    ├──catalog.html
-    ├──company.html
-    ├──index.html
-    ├──meny.html
-    └──order.html
+  ├──aboutus.html
+  ├──admin.html
+  ├──base.html
+  ├──catalog.html
+  ├──company.html
+  ├──index.html
+  ├──meny.html
+  └──order.html
 ├── app.py      # Файл запуска
 ├── database.db # База данных
 ├── init_db.py  # Добавление данных в базу данных
