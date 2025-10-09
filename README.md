@@ -38,6 +38,14 @@
 
 ---
 
+## 📖 Документация
+
+*   **[Полная документация для разработчиков](./docs/README.md)** - Детальное руководство по разработке, архитектуре и API.
+*   [Часто задаваемые вопросы (FAQ)](./docs/FAQ.md)
+*   [Руководство по контрибьютингу](./docs/CONTRIBUTING.md)
+
+---
+
 ## ✨ Функциональность
 
   О компании, покупка товара, сохранение данных для покупки товара, промотр заказов за всё время
@@ -47,9 +55,8 @@
 ## 🛠 Технологии
 
 *   **Бэкенд:** Flask
-*   **Фронтенд:** Html,css
+*   **Фронтенд:** Html
 *   **База данных:** Sqlite3
-
 ---
 
 ## 🤝 Как можно помочь проекту
@@ -58,22 +65,28 @@
 
 ---
 
+## 📜 Лицензия
+
+Этот проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
+
+---
+
 ## 📞 Контакты
 
-Ваше имя или название команды – Севастьян
-* Ссылка на проект: https://github.com/SevaMrow/ProjectSite
+Плотников Севастьян Анатольевич - ИПО-22.24
+* Ссылка на проект: https://drive.google.com/drive/folders/1cGQGv5Dof2-NFpfFt22_A7hlwzWXAIwj?usp=sharing
 
 ## 📁 Структура проекта
 ```
 ProjectSite/
-├── __pycache__
+├── __pycache__    #кэш питона
     ├──app.cpython-39.pyc
     ├──models.cpython-39
     └──models.cpython-313.pyc
-├── static
+├── static        #Хранение для будущего css и изображений
     └──img
         └──Screenshot8480.png
-├── templates
+├── templates    # Сайты страничек html
     ├──aboutus.html
     ├──admin.html
     ├──base.html
@@ -82,9 +95,9 @@ ProjectSite/
     ├──index.html
     ├──meny.html
     └──order.html
-├── app.py
-├── database.db
-├── init_db.py
-├── models.py
-└──README.md
+├── app.py      # Файл запуска
+├── database.db # База данных
+├── init_db.py  # Добавление данных в базу данных
+├── models.py   # Хранение вида базы данных
+└──README.md    # файл описание
 ```
