@@ -47,7 +47,7 @@
 ## 🛠 Технологии
 
 *   **Бэкенд:** Flask
-*   **Фронтенд:** Html,css
+*   **Фронтенд:** Html
 *   **База данных:** Sqlite3
 
 ---
@@ -60,20 +60,20 @@
 
 ## 📞 Контакты
 
-Ваше имя или название команды – Севастьян
+Плотников Севастьян Анатольевич - ИПО-22.24
 * Ссылка на проект: https://github.com/SevaMrow/ProjectSite
 
 ## 📁 Структура проекта
 ```
 ProjectSite/
-├── __pycache__
+├── __pycache__    #кэш питона
     ├──app.cpython-39.pyc
     ├──models.cpython-39
     └──models.cpython-313.pyc
-├── static
+├── static        #Хранение для будущего css и изображений
     └──img
         └──Screenshot8480.png
-├── templates
+├── templates    # Сайты страничек html
     ├──aboutus.html
     ├──admin.html
     ├──base.html
@@ -82,9 +82,9 @@ ProjectSite/
     ├──index.html
     ├──meny.html
     └──order.html
-├── app.py
-├── database.db
-├── init_db.py
-├── models.py
-└──README.md
+├── app.py      # Файл запуска
+├── database.db # База данных
+├── init_db.py  # Добавление данных в базу данных
+├── models.py   # Хранение вида базы данных
+└──README.md    # файл описание
 ```
