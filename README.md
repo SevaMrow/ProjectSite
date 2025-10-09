@@ -1,8 +1,6 @@
 
 # German Auto Parts
 
-
-[![Статус сборки](https://img.shields.io/travis/SevaMrow/ProjectSite/master.sv)](https://travis-ci.org/SevaMrow/ProjectSite)
 [![Лицензия](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Версия](https://img.shields.io/badge/version-1.0.0-green.svg)]()
 
